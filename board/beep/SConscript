@@ -1,0 +1,16 @@
+Import('RTT_ROOT')
+Import('rtconfig')
+from building import *
+
+cwd     = GetCurrentDir()
+src     = ["beep.c"]
+
+CPPPATH = [cwd]
+
+
+if GetDepend("BSP_USING_BEEP_EXAMPLE"):
+    src +=["beep_example.c"]
+
+group = DefineGroup('Packages', src, depend = ['BSP_USING_BEEP'], CPPPATH = CPPPATH)
+
+Return('group')
