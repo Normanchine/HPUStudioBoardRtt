@@ -78,7 +78,7 @@
             "servertype": "openocd",
             "configFiles": [
                 "interface/stlink-v2.cfg",
-                "target/stm32f4x.cfg"
+                "target/stm32f1x.cfg"
             ],
             "armToolchainPath": "D:/workspace_work/env-windows/tools/gnu_gcc/arm_gcc/mingw/bin", // ！！！需要修改为自己的GCC 工具链路径 ！！！
             "gdbPath": "D:/workspace_work/env-windows/tools/gnu_gcc/arm_gcc/mingw/bin/arm-none-eabi-gdb.exe" // ！！！需要修改为自己的GDB 路径 ！！！
