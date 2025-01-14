@@ -380,7 +380,6 @@
 
 #define BSP_USING_USB_TO_USART
 #define BSP_USING_LED
-#define BSP_USING_KEY_LED
 /* end of Onboard Peripheral Drivers */
 
 /* On-chip Peripheral Drivers */

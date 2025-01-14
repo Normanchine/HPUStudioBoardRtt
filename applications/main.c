@@ -11,24 +11,29 @@
 
 #include <board.h>
 #include <rtthread.h>
-#include <drv_gpio.h>
-#ifndef RT_USING_NANO
-#include <rtdevice.h>
-#endif /* RT_USING_NANO */
-
-/* defined the LED0 pin: PC13 */
-#define LED0_PIN    GET_PIN(C, 13)
+#include <ports_pin.h>
+#include <led.h>
 
 int main(void)
 {
     /* set LED0 pin mode to output */
-    rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
+    init_LED();
+
 
     while (1)
     {
-        rt_pin_write(LED0_PIN, PIN_HIGH);
+        rt_pin_write(LED_RIGHT_DOWN,PIN_LOW);
+        rt_pin_write(LED_RIGHT_UP,PIN_LOW);
+        rt_pin_write(LED_LEFT_DOWN,PIN_LOW);
+        rt_pin_write(LED_LEFT_UP,PIN_LOW);
+        
         rt_thread_mdelay(500);
-        rt_pin_write(LED0_PIN, PIN_LOW);
+        
+        rt_pin_write(LED_RIGHT_DOWN,PIN_HIGH);
+        rt_pin_write(LED_RIGHT_UP,PIN_HIGH);
+        rt_pin_write(LED_LEFT_DOWN,PIN_HIGH);
+        rt_pin_write(LED_LEFT_UP,PIN_HIGH);
+
         rt_thread_mdelay(500);
     }
 }
