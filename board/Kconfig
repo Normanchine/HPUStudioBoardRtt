@@ -60,6 +60,18 @@ menu "Onboard Peripheral Drivers"
                 default n
 
         endif
+
+    menuconfig BSP_USING_LightSensor
+        bool "Enable LightSensor"
+        default n
+
+        if BSP_USING_LightSensor
+
+            config BSP_USING_LightSensorDemo
+                bool "Enable Light sensor demo"
+                default n
+                
+        endif
         
 endmenu
 

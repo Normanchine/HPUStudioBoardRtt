@@ -21,3 +21,6 @@
 #define KEY_UP GET_PIN(B, 1)
 #define KEY_DOWN GET_PIN(B, 15)
 
+/* 光敏 */
+#define LIGHT_SENSOR GET_PIN(B, 13)
+
