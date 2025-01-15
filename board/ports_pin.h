@@ -24,3 +24,6 @@
 /* 光敏 */
 #define LIGHT_SENSOR GET_PIN(B, 13)
 
+/* OLED */
+#define SDA GET_PIN(B,9)
+#define SCL GET_PIN(B,8)

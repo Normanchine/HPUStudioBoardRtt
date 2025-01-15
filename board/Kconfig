@@ -72,6 +72,18 @@ menu "Onboard Peripheral Drivers"
                 default n
                 
         endif
+
+    menuconfig BSP_USING_OLED
+        bool "Enable OLED"
+        default n
+
+        if BSP_USING_OLED
+
+            config BSP_USING_OLED_DEMO
+                bool "Enable OLED demo"
+                default n
+                
+        endif
         
 endmenu
 
