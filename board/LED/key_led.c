@@ -50,4 +50,4 @@ static int rt_pin_irq_example(void)
 }
 
 /* 导出命令到 msh */
-MSH_CMD_EXPORT(rt_pin_irq_example, key_led示例);
+INIT_DEVICE_EXPORT(rt_pin_irq_example);
