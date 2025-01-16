@@ -382,8 +382,6 @@
 
 #define BSP_USING_USB_TO_USART
 #define BSP_USING_LED
-#define BSP_USING_OLED
-#define BSP_USING_OLED_DEMO
 /* end of Onboard Peripheral Drivers */
 
 /* On-chip Peripheral Drivers */

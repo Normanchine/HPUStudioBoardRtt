@@ -16,10 +16,10 @@
 
 int main(void)
 {
-    /* set LED0 pin mode to output */
-    #ifndef BSP_USING_KEY_LED
-    init_LED();  
-    #endif
+    /* 设置流水灯 */
+
+  
+
 
     while (1)
     {
