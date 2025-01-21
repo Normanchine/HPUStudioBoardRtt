@@ -26,7 +26,6 @@ extern "C" {
 /* 硬件参数配置 */
 #ifndef PKG_BEEP_ACTIVE_BUZZER
 #define PKG_BEEP_PASSIVE_BUZZER                 // 无源蜂鸣器
-
 #endif
 
 #ifdef PKG_BEEP_PASSIVE_BUZZER
@@ -38,7 +37,6 @@ extern "C" {
 #endif
 #ifndef PKG_BEEP_DEFAULT_FREQ
 #define PKG_BEEP_DEFAULT_FREQ           2300U   // 蜂鸣器最佳发声频率 Hz
-
 #endif
 #endif /* PKG_BEEP_PASSIVE_BUZZER */
 
@@ -46,14 +44,12 @@ extern "C" {
 #if defined(RT_USING_PM) && defined(PKG_BEEP_PASSIVE_BUZZER)
 #ifndef PKG_BEEP_BLOCK_POWER_STOP
 #define PKG_BEEP_BLOCK_POWER_STOP               // 无源蜂鸣器鸣叫时阻止MCU进入STOP低功耗模式
-
 #endif
 
 #define PKG_BEEP_REQUEST_PM_MODE        PM_SLEEP_MODE_IDLE
 
 #ifndef PKG_BEEP_SUPPORT_PM_RUN_FREQ_CHANGE
 #define PKG_BEEP_SUPPORT_PM_RUN_FREQ_CHANGE     // 在MCU运行频率改变时，无源蜂鸣器发声频率不变
-
 #endif
 #endif /* defined(RT_USING_PM) && defined(PKG_BEEP_PASSIVE_BUZZER) */
 
