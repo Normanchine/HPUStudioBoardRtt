@@ -3,7 +3,7 @@
 
 
 /* 比如可以在main.c中使用，此为无源蜂鸣器使用，有源的一样，就发声频率不能控制 */
-void beep_thread(void)
+void beep_thread(void* parameter)
 {
     /* 先初始化 beep */
     /* 第一个参数为蜂鸣器驱动引脚号，可查看drv_gpio.c，或使用GET_PIN()宏得到，如下面为PA11脚 */
@@ -37,7 +37,7 @@ void beep_thread(void)
     beep_deinit();
 }
 
-void beep_thread_entry(void *parameter)
+static int beep_thread_entry(void *parameter)
 {
     rt_thread_t thread = rt_thread_create("beep", beep_thread, RT_NULL, PKG_BEEP_THREAD_STACK_SIZE, PKG_BEEP_THREAD_PRIORITY, PKG_BEEP_THREAD_TIMESLICE);
     if (thread != RT_NULL)

@@ -1,5 +1,6 @@
 #include <rtthread.h>
 #include <rtdevice.h>
+#include <stdlib.h>
 
 /*
 //于kconfig 进行了定义，可在menconfig中进行修改。若不想从menuconfig修改，则解除该注释即可

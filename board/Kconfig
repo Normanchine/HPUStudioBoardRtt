@@ -37,17 +37,9 @@ menu "Onboard Peripheral Drivers"
         imply RTDUINO_USING_SERVO
         default n
 
-    menuconfig BSP_USING_BEEP
-        bool "Enable beep"
+    menuconfig BSP_USING_BEEP_EXAMPLE
+        bool "Enable beep example"
         default n
-
-        if BSP_USING_BEEP
-
-            config BSP_USING_BEEP_EXAMPLE
-                bool "Enable beep example"
-                default n
-
-        endif
 
     menuconfig BSP_USING_LED
         bool "Enable LED"
@@ -66,7 +58,7 @@ menu "Onboard Peripheral Drivers"
         default n
 
         if BSP_USING_LightSensor
-
+        
             config BSP_USING_LightSensorDemo
                 bool "Enable Light sensor demo"
                 default n
@@ -84,6 +76,7 @@ menu "Onboard Peripheral Drivers"
                 default n
                 
         endif
+
     menuconfig BSP_USING_SG90
         bool "Enable SG90"
         default n

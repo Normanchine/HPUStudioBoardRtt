@@ -383,7 +383,7 @@
 /* Onboard Peripheral Drivers */
 
 #define BSP_USING_USB_TO_USART
-#define BSP_USING_BEEP
+#define BSP_USING_BEEP_EXAMPLE
 #define BSP_USING_LED
 #define BSP_USING_SG90
 #define BSP_USING_SG90_DEMO
