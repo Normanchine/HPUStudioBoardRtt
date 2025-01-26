@@ -52,6 +52,13 @@ menu "Onboard Peripheral Drivers"
                 default n
 
         endif
+    
+    menuconfig BSP_USING_ADC_EXAMPLE
+        bool "Enable ADC Demo"
+        default n
+        select BSP_USING_ADC
+        select BSP_USING_ADC1
+
 
     menuconfig BSP_USING_LightSensor
         bool "Enable LightSensor"

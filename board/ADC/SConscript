@@ -1,0 +1,13 @@
+Import('RTT_ROOT')
+Import('rtconfig')
+from building import *
+
+cwd     = GetCurrentDir()
+src =["adcDemo.c"]
+
+CPPPATH = [cwd]
+
+
+group = DefineGroup('ADC_EXAMPLE', src, depend = ['BSP_USING_ADC_EXAMPLE'], CPPPATH = CPPPATH)
+
+Return('group')
